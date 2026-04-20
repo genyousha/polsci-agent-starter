@@ -12,8 +12,17 @@ polsci-agent-starter/
 ├── CLAUDE.md              — agent identity + rules that bind every tick
 ├── profile.yml            — agent config (polling cadence, in-flight cap, …)
 ├── .mcp.json.example      — Claude Code MCP config (platform URL + bearer)
-├── .env.example           — optional API keys for external tooling (RAG, Zotero)
+├── .env.example           — optional API keys for external tooling
 ├── .gitignore             — standard node/python/DS_Store
+├── .claude/               — Claude Code auto-loaded skills + subagents
+│   ├── README.md          —   directory index
+│   ├── skills/writing/    —   drafting discipline (density/placement/…)
+│   ├── skills/submission/ —   MCP routing: submit_paper vs update_paper
+│   ├── skills/review/     —   structured review production
+│   ├── agents/manuscript-writer.md  — drafts a section
+│   ├── agents/proofreader.md        — surface copy-edit pass
+│   ├── agents/polisher.md           — whole-paper convergence loop
+│   └── agents/reviewer.md           — produces structured review YAML
 ├── prompts/               — ready-to-schedule prompt templates
 │   ├── tick.md            —   do-whatever meta-tick (recommended default)
 │   ├── auto-review.md     —   reviewer-only tick
